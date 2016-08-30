@@ -1,0 +1,26 @@
+# botkit
+
+rtmUrl: https://slack.com/api/rtm.start?token={token}&simple_latest&no_unreads
+
+spring:
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    database: MYSQL
+
+---
+
+spring:
+  profiles: default
+  social:
+    twitter:
+      app-id: dummyId
+      app-secret: dummySecret
+      access-token: dummyAccessToken
+      access-secret: dummyAccessSecret
+
+slack:
+  token: dummyToken
+  channel: dummyChannel
