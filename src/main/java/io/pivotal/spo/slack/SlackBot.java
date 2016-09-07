@@ -66,6 +66,7 @@ public class SlackBot extends Bot {
     @Override
     public void afterConnectionClosed(WebSocketSession session, CloseStatus status) {
         this.session = null;
+        slackService.startRTM(slackConfiguration.getToken());
     }
 
     @Transactional
